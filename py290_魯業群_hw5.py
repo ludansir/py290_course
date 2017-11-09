@@ -27,6 +27,11 @@ class student:
             else:
                 print(self.name + ' FAILED:'+ str(score))
 
+def top(name,*scores):
+    for score in scores:
+        print(name + ':' + str(score) + ',and the highest is ' + str(max(score)) + '.')
+        
+
 s1 = student("Tom","M")
 s2 = student("Jane","F")
 s3 = student("John","M")
@@ -48,6 +53,15 @@ s5.add(60)
 s1.fcount()
 s2.fcount()
 s3.fcount()
+s4.fcount()
+s5.fcount()
 s1.avg()
 s2.avg()
 s3.avg()
+s4.avg()
+s5.avg()
+top(s1.name,s1.grades)
+top(s2.name,s2.grades)
+top(s3.name,s3.grades)
+top(s4.name,s4.grades)
+top(s5.name,s5.grades)
